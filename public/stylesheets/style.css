@@ -1,0 +1,31 @@
+body {
+	background-color: grey;
+}
+
+head {
+  	text-align: center;
+  	margin-bottom: 20px;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+footer {
+	font-size: 13px;
+	text-shadow: white;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 20px blue;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: black;
+}
+
+jumbotron {
+	padding-left: 150px;	
+	
+}
