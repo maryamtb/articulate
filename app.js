@@ -24,16 +24,18 @@ var app = express();
 //app.use(express.static(path.join(__dirname, 'public'))); 
 //app.use(bodyParser.json());
 
-var portfolio = require('./routes/portfolio');
-app.use('/portfolio', portfolio);
-var error = require('./config/error_handler'); 
-error(app);
+//var portfolio = require('./routes/portfolio');
+//app.use('/portfolio', portfolio);
+var home = require('./routes/portfolio');
+app.use('/', home);
 var about = require('./routes/about');
 app.use('/about', about);
 var contact = require('./routes/contact');
 app.use('/contact', contact);
-//var index = require('./routes/index');
-//app.use('/', index);
+
+
+var error = require('./config/error_handler'); 
+error(app);
 
 // add route
 // app.get('/articles/add', function(req, res){
