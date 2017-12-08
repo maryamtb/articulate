@@ -1,14 +1,7 @@
 body {
-	background-color: grey;
+	background-color: #f2f2f2;
 }
 
-head {
-  	text-align: center;
-}
-
-header {
-	text-align: center;
-}
 
 #welcome {
 	text-align: center;
@@ -16,17 +9,11 @@ header {
 
 footer {
 	font-size: 13px;
-	text-shadow: white;
+	color: white;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 200px;
 	margin-bottom: 10px;
-	border: 20px blue;
-	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: black;
+	padding-top: 20px;
 }
 
-jumbotron {
-	padding-left: 150px;	
-	
-}

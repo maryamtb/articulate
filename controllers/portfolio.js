@@ -1,11 +1,14 @@
-var model = require('../model/portfolio');
+var portfolio = require('../model/portfolio');
 
 exports.list = function(req, res, next) {
-// ^call controller function for portfolio
-
-model.find({}, function(err, result) {
+        
+portfolio.find({}, function(err, result) {
         if (err) return next(err)
-        res.render('articles',
+        res.render('portfolio',
              { 'title': 'Express', 'data': result });
        })
-    }
+}
+    
+
+
+

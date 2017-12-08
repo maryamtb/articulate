@@ -2,21 +2,34 @@
 <html>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
     <link rel='stylesheet' href='./stylesheets/style.css' />
     <% include partials/head %>
   	    <header>
    	     	<% include partials/header %>
   	    </header>
     </head>
-
-    <ul>
-        <% for (var i = 0; i < data.length; i++) { %> <li>
-            <%= data[i].name + ", " + data[i].author + ", " + data[i].url %>
-        </li>
-        <% } %> 
-    </ul>
-    
+   
+    <body>
+      <h3 style="text-center">List of Articles</h3>
+      <main>
+        <div class="articles">  
+          <ul>
+            <li>
+              <p>Inside the Brain of Robot Sophia, Dave Gershgorn, https://qz.com/1121547/how-smart-is-the-first-robot-citizen/</p>
+            </li>
+            <li>
+              <p>Russia and the World Cup, August Rick, https://www.forbes.com/sites/augustrick/2017/12/06/what-russias-world-cup-struggle-for-sponsors-in-2018-tells-us-about-politics-in-sport-today/#47644d6433d9</p>
+              </li>
+              <li>
+              <p>Augmented Reality and Surgery, Nadine Hachach-Haram, https://www.ted.com/talks/nadine_hachach_haram_how_augmented_reality_could_change_the_future_of_surgery</p>
+              </li>
+              <li>
+              <p>The Bitcoin Boom, Farhad Manjoo, https://www.nytimes.com/2017/12/08/technology/farhad-mike-tech-bitcoin-boom.html?rref=collection%2Ftimestopic%2FBitcoin&action=click&contentCollection=timestopics&region=stream&module=stream_unit&version=
+          latest&contentPlacement=1&pgtype=collection</p>  
+              </li>
+            </ul>
+        </div>
+      </main>
     </body>
 
 	<footer>

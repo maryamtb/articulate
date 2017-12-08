@@ -24,44 +24,24 @@ var app = express();
 //app.use(express.static(path.join(__dirname, 'public'))); 
 //app.use(bodyParser.json());
 
-//var portfolio = require('./routes/portfolio');
-//app.use('/portfolio', portfolio);
-var home = require('./routes/portfolio');
+
+var portfolio = require('./routes/portfolio');
+app.use('/portfolio', portfolio);
+var home = require('./routes/home');
 app.use('/', home);
+
 var about = require('./routes/about');
 app.use('/about', about);
+var add = require('./routes/add');
+app.use('/add', add); 
+var remove = require('./routes/remove');
+app.use('/remove', remove);
 var contact = require('./routes/contact');
 app.use('/contact', contact);
 
 
 var error = require('./config/error_handler'); 
 error(app);
-
-// add route
-// app.get('/articles/add', function(req, res){
-  // res.render('add_article', {
-    // title: 'Add Article'
-  // });
-// });
-
-
-// add submit POST route
-//app.post('/articles/add', function(req, res){
-//  let article = new article();
-//  article.title = req.body.title;
-//  article.author = req.body.author;
-//  article.url = req.body.url;
-  
-  // article.save(function(err){
-    // if(err){
-      // console.log(err);
-// /      return;
-    // } else {
-      // res.redirect('/');
-      // }
-    // }
-  // );
-// });
 
 
 module.exports = app;

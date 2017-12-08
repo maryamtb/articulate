@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 var Contact = Schema.Contact;
 
 var ContactSchema = new Schema({
-    owner   : String
-  , title   : String
-  , description    : String
+    owner   : String,
+    title   : String,
+    description    : String,
 });
 module.exports = mongoose.model('Contact', ContactSchema);
