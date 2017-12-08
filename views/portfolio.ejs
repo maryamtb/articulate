@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='./stylesheets/style.css' />
+    <% include partials/head %>
+  	    <header>
+   	     	<% include partials/header %>
+  	    </header>
+    </head>
+
+    <ul>
+        <% for (var i = 0; i < data.length; i++) { %> <li>
+            <%= data[i].name + ", " + data[i].author + ", " + data[i].url %>
+        </li>
+        <% } %> 
+    </ul>
+    
+    </body>
+
+	<footer>
+    <% include partials/footer %>
+  </footer>
+  
+</html>
