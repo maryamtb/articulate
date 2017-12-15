@@ -9,6 +9,21 @@ var express = require('./config/express');
 //var mongoose = require('./config/mongoose');
 var app = express();
 
+var path = require('path');
+app.set('./views', path.join(__dirname, './views'));
+app.set('view engine', 'ejs');
+
+
+
+//app.post("/addname", (req, res) => {
+ //res.send('');
+//});
+
+//app.listen(port, () => {
+ //console.log("Server listening on port " + port);
+//});
+
+
 
 // view engine setup
 //app.set('./views', path.join(__dirname, './views'));
@@ -29,7 +44,6 @@ var portfolio = require('./routes/portfolio');
 app.use('/portfolio', portfolio);
 var home = require('./routes/home');
 app.use('/', home);
-
 var about = require('./routes/about');
 app.use('/about', about);
 var add = require('./routes/add');
@@ -38,10 +52,9 @@ var remove = require('./routes/remove');
 app.use('/remove', remove);
 var contact = require('./routes/contact');
 app.use('/contact', contact);
-
-
 var error = require('./config/error_handler'); 
 error(app);
+
 
 
 module.exports = app;
