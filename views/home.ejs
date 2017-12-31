@@ -10,17 +10,72 @@
     </head>
     <body>
       <main>
-        <br>
-        
-        </br>
-        <img src="https://images.unsplash.com/photo-1444990689320-bd2a7a839644?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4c7cfe1fefafc94b44fc477725ab1ca3" alt="Home View" width="100%" height="500">
-        
+        <img src="https://images.unsplash.com/photo-1444990689320-bd2a7a839644?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4c7cfe1fefafc94b44fc477725ab1ca3" alt="Home View" width="100%" height="300">
+        <div class="container">
+        <section class="insert">
+            <h3>Insert Data</h3>
+            <form action="/insert" method="post">
+                <div class="input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="input">
+                    <label for="content">Content</label>
+                    <input type="text" id="content" name="content">
+                </div>
+                <div class="input">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <button type="submit">INSERT</button>
+            </form>
+        </section>
+        <section class="update">
+            <h3>Update Data</h3>
+            <form action="/update" method="post">
+                <div class="input">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id">
+                </div>
+                <div class="input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="input">
+                    <label for="content">Content</label>
+                    <input type="text" id="content" name="content">
+                </div>
+                <div class="input">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <button type="submit">UPDATE</button>
+            </form>
+        </section>
+        <section class="get">
+            <h3>Load Data</h3>
+            <a href="/get-data">LOAD DATA<form action="/get-data" method="post"></a>
+                <div class="input">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id">
+                </div>
+                <button type="submit">LOAD</button>
+            </form>
+        </section>
+        <section class="delete">
+            <h3>Delete Data</h3>
+            <form action="/delete" method="post">
+                <div class="input">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id">
+                </div>
+                <button type="submit">DELETE</button>
+            </form>
+        </section>
+        </div>  
       </main>
-
     </body>
-
 	<footer>
     <% include partials/footer %>
   </footer>
-  
 </html>

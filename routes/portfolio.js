@@ -1,14 +1,15 @@
-//var express = require('express');
-//var router = express.Router();
+var express = require('express');
+var router = express.Router();
+//var mongo = require('mongodb').MongoClient;
+//var objectId = require('mongodb').ObjectID;
+//var assert = require('assert');
 
-//var controller = require('../controllers/portfolio');
+//var url = 'mongodb://maryamscloud9-thekey-5727196:27017/';
+
+//var controller = require('./controller/portfolio');
 
 //router.get('/', controller.list);
 
-//module.exports = router;
-
-var express = require('express');
-var router = express.Router();
 
 router.get('/', function(req, res, next) {
     res.render('portfolio', { title: 'Express' });
