@@ -21,11 +21,11 @@ module.exports = function(app){
             if (err) throw err;
             res.render('form', {links: data});
         });
-    })
-}
+    });
+};
 
 
-module.exports = router
+module.exports = router;
 
 
 
