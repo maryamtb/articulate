@@ -31,4 +31,4 @@ npm-debug.log
 
 bin
 
-config/env/development.js
+.env
